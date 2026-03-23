@@ -1,5 +1,4 @@
 # ESP32-C3 + DHT22 (GPIO21) + WiFi AP + minimal web server
-# MicroPython: main.py
 
 import network
 import socket
@@ -11,9 +10,10 @@ import dht
 # -----------------------------
 # Config
 # -----------------------------
-AP_SSID = "C3_DHT22_DEMO"
+AP_SSID = "ESP32_DHT22_AP"
 AP_PASSWORD = "12345678"  # 8+ chars required for WPA2
 DHT_PIN = 21
+AP_TXPOWER = 5              # workaround for this board
 
 # -----------------------------
 # Sensor setup
@@ -38,10 +38,9 @@ def read_dht():
 # -----------------------------
 ap = network.WLAN(network.AP_IF)
 ap.active(True)
-ap.config(essid=AP_SSID, password=AP_PASSWORD, authmode=network.AUTH_WPA_WPA2_PSK)
+ap.config(essid=AP_SSID, password=AP_PASSWORD, authmode=network.AUTH_WPA_WPA2_PSK, txpower=AP_TXPOWER)
 
-# Optional: set a known IP (usually already 192.168.4.1)
-# ap.ifconfig(("192.168.4.1", "255.255.255.0", "192.168.4.1", "8.8.8.8"))
+
 
 ip = ap.ifconfig()[0]
 print("AP active")
@@ -141,6 +140,7 @@ while True:
 
     except Exception as e:
         # Keep the server alive even if a client disconnects weirdly
+        print("Server error:", repr(e))
         try:
             cl.close()
         except Exception:
