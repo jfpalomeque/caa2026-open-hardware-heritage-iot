@@ -1,3 +1,8 @@
+'''
+ESP-NOW Messaging Demo - Receiver
+This is the receiver code for the ESP-NOW Messaging demo. It allows you to receive messages from a sender board using ESP-NOW.
+'''
+
 import network
 import espnow
 import time

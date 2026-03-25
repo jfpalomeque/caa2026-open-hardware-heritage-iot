@@ -1,3 +1,9 @@
+'''
+ESP-NOW receiver that displays incoming DHT22 sensor data on a TTGO T-Display
+(ESP32 with ST7789 TFT screen). Shows the sender MAC address, temperature,
+humidity, and message count. If no data arrives for 8 seconds, shows a timeout
+message. This script runs on the TTGO T-Display, not the ESP32-C3 SuperMini.
+'''
 # Working on a TTGO T-Display(ESP32)
 from machine import Pin, SPI
 import network

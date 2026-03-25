@@ -1,3 +1,8 @@
+'''
+I2C scanner for the ESP32-C3 SuperMini. Scans the I2C bus and prints the
+address and chip ID of any connected devices. Used to verify wiring before
+running the OLED or sensor demos.
+'''
 from machine import Pin, I2C
 
 # I2C pins for ESP32-C3 SuperMini

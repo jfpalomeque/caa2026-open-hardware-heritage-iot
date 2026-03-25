@@ -1,3 +1,11 @@
+'''
+This is a simple BLE scanner that filters for devices with a name starting with "ESP32C3". 
+It uses the Bluetooth Low Energy (BLE) functionality of the ESP32-C3 to scan for nearby devices and collects 
+information about those that match the specified name prefix. The collected information includes the device's MAC 
+address, name, RSSI (signal strength), advertising type, manufacturer data, and raw advertising data. The results are printed to 
+the console after each scan cycle.
+
+'''
 import bluetooth
 import binascii
 import time

@@ -1,3 +1,9 @@
+'''
+BLE beacon that broadcasts DHT22 temperature and humidity data in the
+manufacturer specific data field of the BLE advertisement. No connection
+is needed; any nearby scanner can pick up the readings.
+The DHT22 sensor is on GPIO21.
+'''
 import bluetooth
 import struct
 import time

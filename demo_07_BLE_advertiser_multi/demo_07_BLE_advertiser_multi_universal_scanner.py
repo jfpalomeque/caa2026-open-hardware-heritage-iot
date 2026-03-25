@@ -1,3 +1,9 @@
+'''
+This is a universal BLE scanner that can be used to detect and display information about nearby BLE devices. It 
+listens for BLE advertisements and extracts the device's MAC address, name (if available), RSSI, advertisement type, 
+manufacturer data, and raw advertisement data. The results are printed in a human-readable format after each scan cycle.
+'''
+
 import bluetooth
 import binascii
 import time

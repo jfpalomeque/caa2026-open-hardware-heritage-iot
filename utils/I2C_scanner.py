@@ -1,3 +1,7 @@
+'''
+I2C scanner for the ESP32-C3 SuperMini. Scans the I2C bus on GPIO8 (SDA)
+and GPIO9 (SCL) and prints the address and chip ID of any connected devices.
+'''
 from machine import Pin, I2C
 
 # I2C pins for ESP32-C3 SuperMini

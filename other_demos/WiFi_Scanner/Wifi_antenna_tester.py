@@ -1,3 +1,8 @@
+'''
+WiFi scanner for the ESP32-C3. Scans for nearby WiFi networks and prints
+the SSID and signal strength (RSSI) of up to 10 networks.
+Useful for testing the antenna and checking WiFi reception.
+'''
 import network
 import time
 

@@ -1,3 +1,16 @@
+'''
+HC-SR04 Ultrasonic Distance Sensor Demo
+This demo shows how to use the HC-SR04 ultrasonic distance sensor with an ESP32-C3.
+The sensor has two main pins: TRIG (trigger) and ECHO (echo). The TRIG pin is used to send a pulse, and the ECHO 
+pin is used to receive the reflected pulse.
+
+The distance is calculated based on the time it takes for the pulse to travel to the object and back. The speed of sound is 
+approximately 343 meters per second, which translates to about 29.1 microseconds per centimeter.
+Make sure to connect the HC-SR04 sensor correctly:
+- TRIG to GPIO20
+- ECHO to GPIO21
+'''
+
 from machine import Pin, time_pulse_us
 import time
 

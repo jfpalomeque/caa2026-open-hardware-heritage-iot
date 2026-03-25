@@ -1,3 +1,10 @@
+'''
+Demo for a 0.91" OLED display (128x32, SSD1306) connected over I2C to the
+ESP32-C3 SuperMini. Displays the device address and a counter that updates
+every half second. Requires the ssd1306.py driver in the same directory.
+- SDA to GPIO8
+- SCL to GPIO9
+'''
 from machine import Pin, I2C
 import time
 import ssd1306

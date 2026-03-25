@@ -1,3 +1,9 @@
+'''
+This is a BLE scanner that listens for advertisements from the multi-sensor ESP32C3 advertiser demo. It filters for devices 
+whose name starts with "ESP32C3" and attempts to decode the manufacturer data payload according to the format defined in 
+the advertiser demo.
+'''
+
 import bluetooth
 import binascii
 import struct

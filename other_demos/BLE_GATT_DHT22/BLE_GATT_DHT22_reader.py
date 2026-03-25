@@ -1,3 +1,9 @@
+'''
+BLE GATT central (reader) that connects to the DHT22 GATT peripheral.
+It scans for a device named "ESP32C3_DHT_GATT", connects to it, discovers
+the environmental service and its characteristics, and reads the temperature
+and humidity values. Use this together with BLE_GATT_DHT22_sender.py.
+'''
 import bluetooth
 import struct
 import time

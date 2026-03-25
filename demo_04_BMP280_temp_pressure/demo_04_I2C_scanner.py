@@ -1,3 +1,9 @@
+'''
+I2C Scanner for finding devices on the I2C bus. This code initializes the I2C bus and scans for connected devices,
+printing their addresses. 
+It also reads the chip ID from the BMP280 sensor to confirm it's connected properly.
+'''
+
 from machine import Pin, I2C
 
 # I2C pins for ESP32-C3 SuperMini

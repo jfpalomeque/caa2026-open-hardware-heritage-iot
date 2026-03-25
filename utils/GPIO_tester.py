@@ -1,3 +1,9 @@
+'''
+GPIO LED tester for the ESP32-C3 SuperMini. Connects an LED with a 330 ohm
+resistor to each GPIO pin and tests them one at a time. First blinks all
+pins together, then runs a chase pattern across all GPIOs except GPIO2
+and GPIO9. Useful for checking which pins are working on your board.
+'''
 # ESP32-C3 Super Mini GPIO LED test (MicroPython, Thonny)
 # Assumption: each GPIO drives an LED through a 330 ohm resistor to the LED anode,
 # and all LED cathodes go to common GND.

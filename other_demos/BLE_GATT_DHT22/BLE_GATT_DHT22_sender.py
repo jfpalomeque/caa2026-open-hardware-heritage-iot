@@ -1,3 +1,9 @@
+'''
+BLE GATT peripheral that exposes DHT22 temperature and humidity readings
+as readable characteristics. A central device (like BLE_GATT_DHT22_reader.py)
+can connect and read the values. The sensor is on GPIO21.
+This is a connection-based approach, unlike the beacon/advertiser demos.
+'''
 import bluetooth
 import struct
 import time

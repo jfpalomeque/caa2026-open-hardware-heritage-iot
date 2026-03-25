@@ -1,3 +1,9 @@
+'''
+BLE GATT peripheral that sends DHT22 temperature and humidity readings
+using BLE notifications. When a central device subscribes, it receives
+updates automatically every 2 seconds. The sensor is on GPIO21.
+Unlike the read-based GATT demo, this one pushes data to the client.
+'''
 import bluetooth
 import struct
 import time

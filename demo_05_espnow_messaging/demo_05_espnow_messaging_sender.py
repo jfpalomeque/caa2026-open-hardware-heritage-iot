@@ -1,3 +1,9 @@
+'''
+ESP-NOW Messaging Demo - Sender
+This is the sender code for the ESP-NOW Messaging demo. It allows you to send messages to a receiver board using ESP-NOW.
+Make sure to update the PEER_MAC variable with the MAC address of your receiver board, 
+or use the broadcast MAC to send to all receivers on the same channel.
+'''
 import network
 import espnow
 import time

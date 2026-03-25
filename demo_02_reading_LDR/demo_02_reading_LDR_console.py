@@ -1,3 +1,10 @@
+'''
+This code demonstrates how to read the value from a Light Dependent Resistor (LDR) connected to GPIO0 on the ESP32-C3 SuperMini.
+The LDR is part of a voltage divider circuit, and the ADC (Analog to Digital Converter) reads the voltage at the midpoint, 
+which varies with light intensity.
+The code continuously reads the ADC value, which ranges from 0 (dark) to 4095 (bright), and prints it to the 
+Thonny console every half second.
+'''
 from machine import ADC, Pin
 import time
 

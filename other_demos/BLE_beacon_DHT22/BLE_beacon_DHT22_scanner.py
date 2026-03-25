@@ -1,3 +1,8 @@
+'''
+BLE scanner that listens for the "ESP32C3_BEACON" device and decodes
+the temperature and humidity values from the manufacturer data in the
+advertisement. Use together with BLE_beacon_DHT22_advertiser.py.
+'''
 import bluetooth
 import struct
 import time

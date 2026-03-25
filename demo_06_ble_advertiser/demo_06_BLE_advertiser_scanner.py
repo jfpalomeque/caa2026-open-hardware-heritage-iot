@@ -1,3 +1,15 @@
+'''
+This example demonstrates how to create a BLE scanner using the ESP32-C3's Bluetooth Low Energy 
+(BLE) capabilities. The device will scan for nearby BLE advertisers and print out the name, MAC 
+address, and RSSI of any devices it finds that match a specified target name.
+
+To run this example, you will need to have the ESP32-C3 set up with MicroPython and the necessary Bluetooth 
+libraries. The code initializes the BLE module, sets up an interrupt handler to process scan results, and starts 
+scanning for nearby BLE devices. When a device with the target name is found, its details are printed to the console.
+
+You can use a BLE advertiser (like the one in demo_06_BLE_advertiser.py) to broadcast a device name that this scanner 
+will look for. When the advertiser is running, you should see its details printed by the scanner when it is discovered.
+'''
 import bluetooth
 import time
 

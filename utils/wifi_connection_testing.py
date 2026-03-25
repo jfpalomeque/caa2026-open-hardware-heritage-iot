@@ -1,3 +1,8 @@
+'''
+WiFi connection tester for the ESP32-C3. Connects to a WiFi network and
+makes a simple HTTP request to example.com to confirm that the board has
+internet access. Update SSID and PASSWORD with your network credentials.
+'''
 import network
 import time
 import socket

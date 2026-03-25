@@ -1,3 +1,10 @@
+'''
+ESP-NOW sender that reads temperature and humidity from a DHT22 on GPIO21
+and sends the values to a specific receiver MAC address. The data is sent
+as a comma-separated string: "temp,hum,counter".
+Note: this script may not work on some ESP32-C3 SuperMini boards due to
+antenna issues. Tested with models that have an external antenna port.
+'''
 # This script doesnt work on some esp32-C3 Supermini (probably due issues with antenna.
 # I used one of the new models, with external antenna port
 import network

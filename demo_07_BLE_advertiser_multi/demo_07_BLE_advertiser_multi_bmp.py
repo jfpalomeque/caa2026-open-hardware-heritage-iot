@@ -1,3 +1,12 @@
+'''
+BLE advertiser that broadcasts BMP280 sensor data (temperature and pressure)
+in the manufacturer specific data field. Similar to the DHT22 version, but
+uses the BMP280 over I2C. The payload includes a node ID, sensor type, and
+the readings. The advertising interval is randomized between 300ms and 700ms.
+Make sure to connect the BMP280 sensor correctly:
+- SDA to GPIO8
+- SCL to GPIO9
+'''
 import bluetooth
 import struct
 import time

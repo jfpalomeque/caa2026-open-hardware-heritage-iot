@@ -1,3 +1,9 @@
+'''
+Basic DHT22 temperature and humidity sensor demo for the ESP32-C3 SuperMini.
+Reads the sensor on GPIO21 every 2 seconds and prints the values to the
+console. The DHT22 needs a pull-up resistor on the data line (the code
+enables the internal pull-up).
+'''
 # Import required modules
 from machine import Pin
 import time

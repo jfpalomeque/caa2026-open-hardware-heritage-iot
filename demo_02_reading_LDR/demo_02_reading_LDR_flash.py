@@ -1,3 +1,16 @@
+'''
+This code demonstrates how to read the value from a Light Dependent Resistor (LDR) connected to GPIO0 on the ESP32-C3 SuperMini and 
+log it to a CSV file on the device's flash storage.
+
+Flash memory has a limited number of write cycles, so this code uses a RAM buffer to store multiple readings before writing them to 
+flash in batches.
+
+The LDR is part of a voltage divider circuit, and the ADC (Analog to Digital Converter) reads the voltage at the midpoint, 
+which varies with light intensity.
+
+The code continuously reads the ADC value, which ranges from 0 (dark) to 4095 (bright), and logs it to "ldr.csv" on the device every second, 
+writing in batches of 10 readings to minimize flash wear.
+'''
 from machine import ADC, Pin
 import time
 

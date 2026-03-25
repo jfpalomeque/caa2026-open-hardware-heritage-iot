@@ -1,3 +1,13 @@
+'''
+BMP280 Temperature and Pressure Sensor Demo
+This demo shows how to use the BMP280 sensor to read temperature and pressure values with an ESP32-C3 SuperMini.
+The BMP280 is a popular sensor for measuring atmospheric pressure and temperature. 
+It communicates over I2C, so we will use the I2C interface of the ESP32-C3 to read data from the sensor.
+Make sure to connect the BMP280 sensor correctly:
+- SDA to GPIO8
+- SCL to GPIO9
+'''
+
 from machine import Pin, I2C
 import time
 from bmp280 import BMP280

@@ -1,3 +1,10 @@
+'''
+WiFi access point with a simple web server on the ESP32-C3. Reads temperature
+and humidity from a DHT22 sensor on GPIO21 and serves the values on a web page
+that auto-refreshes every 3 seconds. Also provides a JSON endpoint at /json.
+Connect to the "ESP32_DHT22_AP" WiFi network (password: 12345678) and open
+the IP address shown in the console.
+'''
 # ESP32-C3 + DHT22 (GPIO21) + WiFi AP + minimal web server
 
 import network

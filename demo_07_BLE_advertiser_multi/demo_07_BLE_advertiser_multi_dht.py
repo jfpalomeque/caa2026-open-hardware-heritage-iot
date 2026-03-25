@@ -1,3 +1,9 @@
+'''
+This example demonstrates how to create a BLE advertiser that broadcasts DHT22 sensor data in the manufacturer 
+specific data field. The payload includes a node ID, sensor type, and the temperature and humidity readings. The advertising 
+interval is randomized between 300ms and 700ms to simulate multiple devices broadcasting at different rates.
+'''
+
 import bluetooth
 import struct
 import time
